@@ -1,2 +1,3 @@
 # red-games
-A future collection of games to enjoy with friends
+
+A future collection of games to enjoy with friends or foes
