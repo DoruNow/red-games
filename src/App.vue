@@ -7,7 +7,9 @@
             <v-icon>mdi-cards-club</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Licitatii</v-list-item-title>
+            <v-list-item-title @click="goTo('licitatii')"
+              >Licitatii</v-list-item-title
+            >
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
@@ -45,6 +47,13 @@ export default {
   }),
   created() {
     this.$vuetify.theme.dark = true;
+  },
+  methods: {
+    goTo(arg) {
+      if (this.$route.path !== `/${arg}`) {
+        this.$router.push(`/${arg}`);
+      }
+    }
   }
 };
 </script>
