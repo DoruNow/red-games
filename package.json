@@ -60,7 +60,10 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
+    "rules": {
+      "ban-ts-ignore": 0,
+      "no-explicit-any": 0
+    },
     "overrides": [
       {
         "files": [

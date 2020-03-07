@@ -30,10 +30,11 @@
 
     <v-content>
       <v-container class="fill-height" fluid>
-        <router-view></router-view>
+        <v-row class="d-flex align-center justify-center">
+          <router-view></router-view>
+        </v-row>
       </v-container>
     </v-content>
-
     <v-footer app>
       <span>&copy; 2020</span>
     </v-footer>

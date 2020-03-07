@@ -1,11 +1,19 @@
 <template>
-  <div>Licitatii Home view</div>
+  <div>
+    <GetUserInformation :formType="'start'" />
+    <GetUserInformation :formType="'join'" />
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import GetUserInformation from "@/components/GetUserInformation.vue";
 
-export default Vue.extend({});
+export default Vue.extend({
+  components: {
+    GetUserInformation
+  }
+});
 </script>
 
-<style lang="less"></style>
+<style scoped></style>
