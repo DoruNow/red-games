@@ -1,19 +1,50 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">Placeholder App.vue / AppBar</div>
+  <v-app id="inspire">
+    <v-navigation-drawer v-model="drawer" app clipped>
+      <v-list dense>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-cards-club</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Licitatii</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-settings</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Coming soon</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar app clipped-left>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title>Partida</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
-      <router-view></router-view>
+      <v-container class="fill-height" fluid>
+        <router-view></router-view>
+      </v-container>
     </v-content>
+
+    <v-footer app>
+      <span>&copy; 2020</span>
+    </v-footer>
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({
-  name: "App"
-});
+<script>
+export default {
+  data: () => ({
+    drawer: null
+  }),
+  created() {
+    this.$vuetify.theme.dark = true;
+  }
+};
 </script>
