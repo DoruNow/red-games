@@ -7,10 +7,6 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: "/licitatii"
-  },
-  {
-    path: "/licitatii",
     component: LicitatiiView
   }
 ];
