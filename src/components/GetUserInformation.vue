@@ -56,7 +56,7 @@ export default Vue.extend({
       showForm: false,
       settingsForm: null,
       menuCardButtonText: "",
-      playerName: "Doru",
+      playerName: "Dorus",
       roomName: "KingPin",
       select: {},
       showIfJoinGame: false,
